@@ -1,0 +1,44 @@
+
+  <ng-include src="fields.principal"></ng-include>
+  
+  <div class="form-group bg-info row">
+  	<label for="payout-timing" class="col-xs-3 control-label text-align-left text-info">Pre-Retirement</label>
+  </div>
+  
+  <div class="form-group">
+    <label for="annualAddition" class="col-xs-3 control-label">Annual Contribution</label>
+    <div class="input-group col-xs-9">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+      <input id="annualAddition" ng-model="vars.annualAddition" required type="text" class="form-control"/>
+	  <span class="input-group-addon">.00</span>
+    </div>
+  </div>
+
+  <ng-include src="fields.years"></ng-include>
+  <ng-include src="fields.ratePercent"></ng-include>
+
+  <div class="form-group bg-info row">
+  	<label for="payout-timing" class="col-xs-3 control-label text-align-left text-info">In Retirement</label>
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="yearsToPayout" class="col-xs-3 control-label">Years to Payout</label>
+    <div class="input-group col-xs-9">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+      <input id="yearsToPayout" ng-model="vars.yearsToPayout" required type="text" class="form-control" placeholder="Whole years please">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="ratePercentRetirement" class="col-xs-3 control-label">{{labels.ratePercent}}</label>
+    <div class="input-group col-xs-9">
+       <strong class="input-group-addon">%</strong>
+       <input id="ratePercentRetirement" ng-model="vars.ratePercentRetirement" min="0" max="1" required type="text" class="form-control" placeholder="e.g., enter .08 for 8%">
+    </div>
+  </div>
+  
+  <ng-include src="fields.calculateResults"></ng-include>
+
+

@@ -1,14 +1,7 @@
 
   <ng-include src="fields.principal"></ng-include>
   <ng-include src="fields.ratePercent"></ng-include>
-
-  <div class="form-group">
-    <label for="years-to-pay-out" class="col-sm-3 control-label">Years</label>
-    <div class="input-group col-sm-9">
-      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-      <input id="years-to-pay-out" ng-model="vars.years" type="text" class="form-control" placeholder="Whole years please">
-    </div>
-  </div>
+  <ng-include src="fields.years"></ng-include>
 
 <div class="form-group">
 	<label for="payout-timing" class="col-sm-3 control-label">Payouts are made at the</label>

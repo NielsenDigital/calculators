@@ -22,7 +22,7 @@ calc.service('FinancialService', function() {
 
 		// ()
 		if (m >= 1) amount -= geometricSeries(num, 0, m - 1);
-	
+		alert("m: " + m);
 		return amount;
 	}
 	
@@ -31,6 +31,13 @@ calc.service('FinancialService', function() {
 		return this.futureValue(principal, ratePercent, years - 1) / this.geometricSeries(1 + ratePercent, 0, years - 1);
 	}
 	
+	// Basic Investment
+	this.investment = function investment(principal, ratePercent, years, contribution) {
+		// if blank treat contribution as 0
+		if (contribution == null) contribution = 0;
+
+		return this.futureValue(principal, ratePercent, years) + contribution * this.geometricSeries(1 + ratePercent, 1, years);
+	}
 
 });
 calc.service('MathService', function(){

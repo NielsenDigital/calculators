@@ -29,7 +29,7 @@ Annuity.controller('AnnuityController', function ($scope, $filter, FinancialServ
 			out *= (1 + $scope.vars.ratePercent);
 		}
 			
-		$scope.vars.result = '$ ' + $filter('number')(out,2);
+		$scope.vars.result = '$ ' + $filter('currency')(out,2);
 	}
 	
 });
