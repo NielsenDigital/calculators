@@ -1,6 +1,3 @@
-function futureValue(principal, ratePercent, years) {
-	return principal * Math.pow(1 + ratePercent, years);
-}
 
 
 function calculateAnnuity(principal, ratePercent, years) {
@@ -27,7 +24,4 @@ function investment(principal, ratePercent, years, contribution) {
 	if (contribution == null) contribution = 0;
 
 	return futureValue(principal, ratePercent, years) + contribution * geometricSeries(1 + r, 1, y);
-}
-function returnRate(currentValue, futureValue, years) {
-	return Math.pow(futureValue / currentValue, 1.0 / years) - 1.0;
 }

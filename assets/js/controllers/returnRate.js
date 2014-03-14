@@ -9,7 +9,8 @@ ReturnRate.controller('ReturnRateController', function ($scope, $filter, Financi
 	
 		$scope.labels = {
 			'years': 'Years',
-			'ratePercent': 'Growth Rate'
+			'ratePercent': 'Growth Rate',
+			'result': 'Return Rate'
 		}
 
 		$scope.vars = {
