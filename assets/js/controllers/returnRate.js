@@ -1,6 +1,7 @@
 var ReturnRate = angular.module('ReturnRate', ['calculations']);
 
-ReturnRate.controller('ReturnRateController', ['$scope', function ($scope) {
+ReturnRate.controller('ReturnRateController', function ($scope, $filter, FinancialService, MathService) {
+	
 		$scope.setActive('returnRate');
 		$scope.currentCalculator = $scope.calculators['returnRate'];
 	
@@ -16,4 +17,9 @@ ReturnRate.controller('ReturnRateController', ['$scope', function ($scope) {
 			'futureValue': 0,
 			'years': 0
 		}
-	}]);
+		
+		$scope.calculate = function calculate() {
+			$scope.vars.result = $filter('number')(100 * FinancialService.returnRate($scope.vars.presentValue,$scope.vars.futureValue,$scope.vars.years), 2) + ' %';
+		}
+		
+	});

@@ -19,13 +19,7 @@
 	</div>
 
       <ng-include src="fields.years"></ng-include>
-
-	  Present value: {{vars.presentValue | currency}} <br/>
-	  future value: {{vars.futureValue | currency}} <br/>
-	  years value: {{vars.years | number}} <br/>
-	  
-	  result: {{vars.result}}
-  <ng-include src="fields.calculateResults"></ng-include>
+	  <ng-include src="fields.calculateResults"></ng-include>
   
 </form>
 
