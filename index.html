@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calculator">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>Financial Calculator</title>
+		<link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap/dist/css/bootstrap.min.css">
+		
+		<!-- AngularJS Framework Files -->
+		
+		<script type="text/javascript" src="/assets/lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="/assets/lib/angular-route/angular-route.min.js"></script>
+		<script type="text/javascript" src="/assets/lib/angular-resource/angular-resource.min.js"></script>
+		
+		<!-- AngularJS Controllers -->
+		
+		<script type="text/javascript" src="/assets/js/controllers/annuity.js"></script>
+		<script type="text/javascript" src="/assets/js/controllers/returnRate.js"></script>
+		<script type="text/javascript" src="/assets/js/controllers/retirement.js"></script>
+		<script type="text/javascript" src="/assets/js/controllers/compoundInterest.js"></script>
+		<script type="text/javascript" src="/assets/js/controllers/forms.js"></script>
+		
+		<!-- AngularJS Modules -->
+		
+		<script type="text/javascript" src="/assets/js/modules/calculator-router.js"></script>
+		
+		<!-- AngularJS Services -->
+		
+		<script type="text/javascript" src="/assets/js/services/calculations.js"></script>
+		
+		<!-- AngularJS App -->
+		
+		<script type="text/javascript" src="/assets/js/app.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="AppCtrl">
+
+			<header>
+				<h1>Financial Calculators</h1>
+
+				<div class="btn-group-sm">
+					<a href="#" class="btn btn-default" ng-class="returnRateActive">
+						Return Rate</a>
+					<a href="#/annuity" class="btn btn-default" ng-class="annuityActive">
+						Annuity</a>
+					<a href="#/retirement"class="btn btn-default" ng-class="retirementActive">
+						Retirement</a>
+					<a href="#/compound-interest" class="btn btn-default" ng-class="compoundInterestActive">
+						Compound Interest</a>
+				</div>
+			</header>
+
+
+			<div ng-view></div>
+
+			<ng-include src="footerUrl"></ng-include>
+		</div>
+	</body>
+</html>

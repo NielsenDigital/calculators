@@ -1,0 +1,43 @@
+<form id="calculatorForm" role="form" class="form-horizontal">
+
+  <ng-include src="fieldsPrincipal"></ng-include>
+
+  <div class="form-group">
+    <label for="growth-rate" class="col-sm-3 control-label">Growth Rate</label>
+    <div class="input-group col-sm-9">
+       <span class="input-group-addon">0.&#160;</span>
+       <input type="text" class="form-control" id="ratePercent" placeholder="% e.g., enter .08 for 8%">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="years-to-pay-out" class="col-sm-3 control-label">Years</label>
+    <div class="input-group col-sm-9">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+      <input type="text" class="form-control" id="years-to-pay-out" placeholder="Whole years please">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="payout-timing" class="col-sm-3 control-label">Payouts are made at the</label>
+    <div class="col-sm-9">
+    <div class="radio">
+      <label>
+        <input type="radio" name="payout-timing" id="payout-timing1" value="start">
+        Beginning of each year (annuity due) 
+      </label>
+      </div>
+      <div class="radio">
+      <label>
+        <input type="radio" name="payout-timing" id="payout-timing2" value="end">
+        Close of each year  (ordinary / immediate annuity)
+      </label>
+      </div>
+    </div>
+  </div>
+
+  <ng-include src="fieldsCalculateResults"></ng-include>
+
+
+</form>
+<div class="clearfix"></div>

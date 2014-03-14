@@ -1,0 +1,31 @@
+<form id="calculatorForm" role="form" class="form-horizontal" ng-controller="ReturnRateController">
+
+	<div class="form-group">
+		<label for="present-value" class="col-sm-3 control-label">Present Value</label>
+		<div class="input-group col-sm-9">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+			<input id="present-value" ng-model="vars.presentValue" type="text" class="form-control">
+			<span class="input-group-addon">.00</span>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="future-value" class="col-sm-3 control-label">Future Value</label>
+		<div class="input-group col-sm-9">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+			<input id="future-value" ng-model="vars.futureValue" type="text" class="form-control">
+			<span class="input-group-addon">.00</span>
+		</div>
+	</div>
+
+      <ng-include src="fields.years"></ng-include>
+
+	  Present value: {{vars.presentValue | currency}} <br/>
+	  future value: {{vars.futureValue | currency}} <br/>
+	  years value: {{vars.years | number}} <br/>
+	  
+	  result: {{vars.result}}
+  <ng-include src="fields.calculateResults"></ng-include>
+  
+</form>
+
