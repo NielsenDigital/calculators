@@ -1,4 +1,6 @@
-function CompoundInterestCtrl($scope) {
+var CompoundInterest = angular.module('CompoundInterest', ['calculations']);
+
+Annuity.controller('CompoundInterestController', ['$scope', function ($scope) {
 	$scope.setActive('compoundInterest');
 	$scope.currentCalculator = $scope.calculators['compoundInterest'];
 	
@@ -10,5 +12,5 @@ function CompoundInterestCtrl($scope) {
 		'years': 'Years to Grow'
 		
 	}
+}]);
 
-}

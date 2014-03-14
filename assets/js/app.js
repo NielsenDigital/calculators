@@ -1,49 +1,21 @@
-function AppCtrl($scope, $routeParams) {
+/**
+* module('name-of-module', [dependencies])
+*/
+angular.module('calculator', ['ngRoute', 'calculations', 'calculatorData', 
+				'ReturnRate', 'Annuity', 'CompoundInterest', 'Retirement'])
+	.config(calculatorRouter);
 
-	$scope.partialsDir = '/assets/partials/';
-	$scope.footerUrl = $scope.partialsDir + 'footer.html';
-	$scope.formBaseUrl = $scope.partialsDir + 'formBase.html';
-	// form fields
-	$scope.formFieldsDir = $scope.partialsDir + 'form-fields/';
-	
-	
-	$scope.fields = {
-		'principal': $scope.formFieldsDir + 'principal.html',
-		'ratePercent': $scope.formFieldsDir + 'rate-percent.html',
-		'years': $scope.formFieldsDir + 'years.html',
-		'calculateResults': $scope.formFieldsDir + 'calculate-results.html'
-	}
+function calculatorRouter ($routeProvider) {
+	$routeProvider
+		.when('/', {templateUrl: '/assets/partials/formBase.html',
+			controller: 'ReturnRateController'})
 
-	$scope.setActive = function(type) {
-		$scope.returnRateActive = '';
-		$scope.annuityActive = '';
-		$scope.retirementActive = '';
-		$scope.compoundInterestActive = '';
+		.when('/annuity', {templateUrl: '/assets/partials/formBase.html',
+			controller: 'AnnuityController'})
+		
+		.when('/retirement', {templateUrl: '/assets/partials/formBase.html',
+			controller: 'RetirementController'})
 
-		$scope[type + 'Active'] = 'active';
-	}
-
-	$scope.calculators = {
-		"returnRate": {
-			"handle": "return-rate",
-			"name": "Return Rate Calculator",
-			"description": "Figures the compound annual growth rate."
-		},
-		"annuity": {
-			"handle": "annuity",
-			"name": "Annuity Calculator",
-			"description": "Figures the annual payout over a period of years."
-		},
-		"retirement": {
-			"handle": "retirement",
-			"name": "Retirement Calculator",
-			"description": "Figures the annual retirement income over time accounting for " +
-								"pre-retirement contributions."
-		},
-		"compoundInterest": {
-			"handle": "compound-interest",
-			"name": "Compound Interest Calculator",
-			"description": "Figures future value accounting for compound interest."
-		}
-	};
+		.when('/compound-interest', {templateUrl: '/assets/partials/formBase.html',
+			controller: 'CompoundInterestController'});
 }
