@@ -1,6 +1,10 @@
 <div>
 <h3>{{currentCalculator.name}}</h3>
 
-<ng-include src="currentForm"></ng-include>
+<form id="calculatorForm" role="form" class="form-horizontal">
+	<ng-include src="currentForm"></ng-include>
+</form>
+
+<div class="clearfix"></div>
 
 </div>

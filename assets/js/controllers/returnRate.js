@@ -14,9 +14,9 @@ ReturnRate.controller('ReturnRateController', function ($scope, $filter, Financi
 		}
 
 		$scope.vars = {
-			'presentValue': 0,
-			'futureValue': 0,
-			'years': 0
+			'presentValue': '',
+			'futureValue': '',
+			'years': ''
 		}
 		
 		$scope.calculate = function calculate() {

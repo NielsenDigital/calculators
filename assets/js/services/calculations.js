@@ -28,15 +28,40 @@ calc.service('FinancialService', function() {
 	
 	// Annuity
 	this.calculateAnnuity = function calculateAnnuity(principal, ratePercent, years) {
-		return futureValue(principal, ratePercent, years - 1) / geometricSeries(ratePercent + 1, 0, years - 1);
+		return this.futureValue(principal, ratePercent, years - 1) / this.geometricSeries(1 + ratePercent, 0, years - 1);
 	}
 	
 
 });
 calc.service('MathService', function(){
-	this.add = function add(a,b)
+	this.isPercentage = function isPercentage(p)
 	{
-		return a + b;
+		if(p >= 0 && p <= 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
+	
+	this.convertNumberToPercentage = function convertNumberToPercentage(n)
+	{
+		if(!(this.isPercentage(n)) && (n <= 100 && n >= 0))
+		{
+			return n / 100;
+		}
+	}
+	
+	this.convertPercentageToNumber = function convertPercentageToNumber(n)
+	{
+		if(this.isPercentage(n) && (n <= 1 && n >= 0))
+		{
+			return n * 100;
+		}
+	}
+	
+	
 });
 
