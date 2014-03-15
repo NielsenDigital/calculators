@@ -1,11 +1,11 @@
 <div class="form-group">
-	<label for="payout-timing" class="col-sm-3 control-label">{{labels.timing}}</label>
+	<label for="timing" class="col-sm-3 control-label">{{labels.timing}}</label>
 	<div class="col-sm-9">
-		<!-- START of Year -->
 		
+		<!-- START of Interval -->
 		<div class="radio">
 			<label>
-				<input id="payout-timing1" ng-model="vars.payoutTiming" type="radio"  value="start">
+				<input id="timing-start" ng-model="vars.payoutTiming" type="radio"  value="start">
 				{{labels.timingStart}} 
 			</label>
 		</div>
@@ -13,7 +13,7 @@
 		<!-- END of year -->
 		<div class="radio">
 			<label>
-				<input id="payout-timing1" ng-model="vars.payoutTiming" type="radio" value="end">
+				<input id="timing-end" ng-model="vars.payoutTiming" type="radio" value="end">
 				{{labels.timingEnd}}
 			</label>
 		</div>

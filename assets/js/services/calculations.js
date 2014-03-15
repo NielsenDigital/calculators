@@ -69,6 +69,10 @@ calc.service('MathService', function(){
 		}
 	}
 	
+	this.numberFormatter = function numberFormatter(n)
+	{
+	    return parseInt(parseFloat(n)*100)/100;
+	}
 	
 });
 

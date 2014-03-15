@@ -24,19 +24,25 @@ Retirement.controller('RetirementController', function ($scope, $filter, Financi
 	
 	$scope.calculate = function calculate() {
 		var out = 0; 
-/*				
-		alert("principal: " + $scope.vars.principal +
-				"\nannualAddition: " + $scope.vars.annualAddition +
-				"\nYears to retirement: " + $scope.vars.years + 
-				"\nrate pre-retirement: " + $scope.vars.ratePercent +
-				"\nYears to Payout: " + $scope.vars.yearsToPayout +
-				"\nrateInRetirement: " + $scope.vars.ratePercentRetirement);
+		var years = 0
+		if($scope.vars.years > 0)
+		{
+			years = MathService.numberFormatter($scope.vars.years);
+		}
+/*			
+		alert("1. principal: " + $scope.vars.principal +
+				"\n2. annualAddition: " + $scope.vars.annualAddition +
+				"\n3. Years to retirement: " + $scope.vars.years + 
+				"\n4. rate pre-retirement: " + $scope.vars.ratePercent +
+				"\n5. Years to Payout: " + $scope.vars.yearsToPayout +
+				"\n6. rateInRetirement: " + $scope.vars.ratePercentRetirement);
 */				
+		// function investment(principal, ratePercent, years, contribution)
 		var fsi = FinancialService.investment($scope.vars.principal,
 											  $scope.vars.ratePercent,
-										 	  $scope.vars.years,
+										 	  years,
 										 	  $scope.vars.annualAddition);
-						 
+ 
 		out = FinancialService.calculateAnnuity(fsi, 
 									$scope.vars.ratePercentRetirement,
 									$scope.vars.yearsToPayout);

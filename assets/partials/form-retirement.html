@@ -2,7 +2,7 @@
   <ng-include src="fields.principal"></ng-include>
   
   <div class="form-group bg-info row">
-  	<label for="payout-timing" class="col-xs-3 control-label text-align-left text-info">Pre-Retirement</label>
+  	<label for="pre-retirement" class="col-sm-3 col-xs-12 control-label text-align-left text-info">Pre-Retirement</label>
   </div>
   
   <ng-include src="fields.annualAddition"></ng-include>
@@ -10,7 +10,7 @@
   <ng-include src="fields.ratePercent"></ng-include>
 
   <div class="form-group bg-info row">
-  	<label for="payout-timing" class="col-xs-3 control-label text-align-left text-info">In Retirement</label>
+  	<label for="in-retirement" class="col-sm-3 col-xs-12 control-label text-align-left text-info">In Retirement</label>
   </div>
 
 
@@ -27,7 +27,8 @@
     <label for="ratePercentRetirement" class="col-xs-3 control-label">{{labels.ratePercent}}</label>
     <div class="input-group col-xs-9">
        <strong class="input-group-addon">%</strong>
-       <input id="ratePercentRetirement" ng-model="vars.ratePercentRetirement" min="0" max="1" required type="text" class="form-control" placeholder="e.g., enter .08 for 8%">
+       <input id="ratePercentRetirement" ng-model="vars.ratePercentRetirement" min="0" max="1" 
+	   		required type="text" class="form-control" placeholder="e.g., enter .08 for 8%">
     </div>
   </div>
   
