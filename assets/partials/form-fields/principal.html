@@ -1,5 +1,8 @@
 <div class="form-group">
-	<label for="principal" class="col-xs-3 control-label">{{labels.principal}}</label>
+	<label for="principal" class="col-xs-3 control-label">
+		<span class="hidden-xs">{{labels.principal}}</span>
+		<small class="visible-xs">{{labels.principal}}</small>	 
+	</label>
 	<div class="input-group col-xs-9">
 		<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
 		<input id="principal" ng-model="vars.principal" required type="number" min="1" class="form-control"/>

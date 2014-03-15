@@ -1,11 +1,16 @@
-  <hr class="space"/>
-  <!-- use ng-show="calculatorResults" once things are ready for production -->
-    <div class="form-group bg-success" ng-show="vars.result">
-      <label class="col-xs-3 control-label"><p class="text-success">{{labels.result}}</p></label>
-      <div class="col-xs-9">
-        <div id="formResults" class="bg-success text-success">{{vars.result}}</div>
-      </div>
-    </div>
-  <div class="form-group">
-    <button class="col-xs-12 col-sm-3 col-sm-offset-3 btn btn-primary" ng-click="calculate();">Calculate</button>
-  </div>
+<hr class="space"/>
+<!-- use ng-show="calculatorResults" once things are ready for production -->
+<div class="form-group bg-success" ng-show="vars.result">
+	<label class="col-xs-3 control-label">
+		<p class="text-success">
+			<span class="hidden-xs">{{labels.result}}</span>
+			<small class="visible-xs">{{labels.result}}</small>	 
+		</p>
+	</label>
+	<div class="col-xs-9">
+    	<div id="formResults" class="bg-success text-success">{{vars.result}}</div>
+	</div>
+</div>
+<div class="form-group">
+	<button class="col-xs-12 col-sm-3 col-sm-offset-3 btn btn-primary" ng-click="calculate();">Calculate</button>
+</div>

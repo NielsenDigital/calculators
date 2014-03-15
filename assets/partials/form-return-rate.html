@@ -1,6 +1,9 @@
 
 	<div class="form-group">
-		<label for="present-value" class="col-xs-3 control-label">Present Value</label>
+		<label for="present-value" class="col-xs-3 control-label">
+			<span class="hidden-xs">Present Value</span>
+			<small class="visible-xs">Present Value</small>
+		</label>
 		<div class="input-group col-xs-9">
 			<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
 			<input id="present-value" ng-model="vars.presentValue" required type="number" min="1" class="form-control">
@@ -9,7 +12,10 @@
 	</div>
 
 	<div class="form-group">
-		<label for="future-value" class="col-xs-3 control-label">Future Value</label>
+		<label for="future-value" class="col-xs-3 control-label">
+			<span class="hidden-xs">Future Value</span>
+			<small class="visible-xs">Future Value</small>
+		</label>
 		<div class="input-group col-xs-9">
 			<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
 			<input id="future-value" ng-model="vars.futureValue" required type="number" min="1" class="form-control">

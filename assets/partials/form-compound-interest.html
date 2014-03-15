@@ -6,11 +6,17 @@
 	<ng-include src="fields.ratePercent"></ng-include>
 
 	<div class="form-group">
-		<label for="compoundFrequency" class="col-xs-3 control-label">Compound Interest</label>
+		<label for="compoundFrequency" class="col-xs-3 control-label">
+			<span class="hidden-xs">Compound Interest</span>
+			<small class="visible-xs">Compound Interest</small>	
+		</label>
 		<div class="input-group col-xs-9">
 			<span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
 			<input id="compoundFrequency" ng-model="vars.compoundFrequency" required type="number" min="1" class="form-control" placeholder="Enter a whole number e.g., 1, 2, 3 ..."/>
-			<span class="input-group-addon"> time(s) annually </span>
+			<span class="input-group-addon">
+				<span class="hidden-xs"> time(s) annually </span>
+				<small class="visible-xs"> time(s) annually </small>	
+			</span>
 		</div>
 	</div>
 

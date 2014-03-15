@@ -1,8 +1,11 @@
 <div class="form-group">
-  <label for="annualAddition" class="col-xs-3 control-label">{{labels.annualAddition}}</label>
-  <div class="input-group col-xs-9">
-    <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
-    <input id="annualAddition" ng-model="vars.annualAddition" required type="number" min="0" class="form-control"/>
-  <span class="input-group-addon">.00</span>
-  </div>
+	<label for="annualAddition" class="col-xs-3 control-label">
+		<span class="hidden-xs">{{labels.annualAddition}}</span>
+		<small class="visible-xs">{{labels.annualAddition}}</small>	 
+	</label>
+	<div class="input-group col-xs-9">
+		<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+		<input id="annualAddition" ng-model="vars.annualAddition" required type="number" min="0" class="form-control"/>
+		<span class="input-group-addon">.00</span>
+	</div>
 </div>

@@ -16,7 +16,10 @@
 
 
   <div class="form-group">
-    <label for="yearsToPayout" class="col-xs-3 control-label">Years to Payout</label>
+    <label for="yearsToPayout" class="col-xs-3 control-label">
+		<span class="hidden-xs">Years to Payout</span>
+		<small class="visible-xs">Years to Payout</small>
+	</label>
     <div class="input-group col-xs-9">
       <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
       <input id="yearsToPayout" ng-model="vars.yearsToPayout" required type="number" min="1" class="form-control" placeholder="Whole years please">

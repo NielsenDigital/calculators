@@ -6,7 +6,8 @@
 		<div class="radio">
 			<label>
 				<input id="timing-start" ng-model="vars.payoutTiming" type="radio"  value="start">
-				{{labels.timingStart}} 
+				<span class="hidden-xs">{{labels.timingStart}}</span>
+				<small class="visible-xs">{{labels.timingStart}}</small>	 
 			</label>
 		</div>
 
@@ -14,7 +15,8 @@
 		<div class="radio">
 			<label>
 				<input id="timing-end" ng-model="vars.payoutTiming" type="radio" value="end">
-				{{labels.timingEnd}}
+				<span class="hidden-xs">{{labels.timingEnd}}</span>
+				<small class="visible-xs">{{labels.timingEnd}}</small>	 
 			</label>
 		</div>
 	</div>

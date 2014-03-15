@@ -1,5 +1,8 @@
   <div class="form-group">
-    <label for="ratePercent" class="col-xs-3 control-label">{{labels.ratePercent}}</label>
+    <label for="ratePercent" class="col-xs-3 control-label">
+		<span class="hidden-xs">{{labels.ratePercent}}</span>
+		<small class="visible-xs">{{labels.ratePercent}}</small>	 
+	</label>
     <div class="input-group col-xs-9">
        <strong class="input-group-addon">%</strong>
        <input id="ratePercent" ng-model="vars.ratePercent" min="0" max="1" required type="number" class="form-control" placeholder="e.g., enter .08 for 8%">
