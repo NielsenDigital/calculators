@@ -19,7 +19,7 @@
     <label for="yearsToPayout" class="col-xs-3 control-label">Years to Payout</label>
     <div class="input-group col-xs-9">
       <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-      <input id="yearsToPayout" ng-model="vars.yearsToPayout" required type="text" class="form-control" placeholder="Whole years please">
+      <input id="yearsToPayout" ng-model="vars.yearsToPayout" required type="number" min="1" class="form-control" placeholder="Whole years please">
     </div>
   </div>
 
@@ -28,7 +28,7 @@
     <div class="input-group col-xs-9">
        <strong class="input-group-addon">%</strong>
        <input id="ratePercentRetirement" ng-model="vars.ratePercentRetirement" min="0" max="1" 
-	   		required type="text" class="form-control" placeholder="e.g., enter .08 for 8%">
+	   		required type="number" min="0" max="1" class="form-control" placeholder="e.g., enter .08 for 8%">
     </div>
   </div>
   

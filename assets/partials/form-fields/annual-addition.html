@@ -2,7 +2,7 @@
   <label for="annualAddition" class="col-xs-3 control-label">{{labels.annualAddition}}</label>
   <div class="input-group col-xs-9">
     <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
-    <input id="annualAddition" ng-model="vars.annualAddition" required type="text" class="form-control"/>
+    <input id="annualAddition" ng-model="vars.annualAddition" required type="number" min="0" class="form-control"/>
   <span class="input-group-addon">.00</span>
   </div>
 </div>

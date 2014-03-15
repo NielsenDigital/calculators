@@ -3,7 +3,7 @@
 		<label for="present-value" class="col-xs-3 control-label">Present Value</label>
 		<div class="input-group col-xs-9">
 			<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
-			<input id="present-value" ng-model="vars.presentValue" required type="text" class="form-control">
+			<input id="present-value" ng-model="vars.presentValue" required type="number" min="1" class="form-control">
 			<span class="input-group-addon">.00</span>
 		</div>
 	</div>
@@ -12,7 +12,7 @@
 		<label for="future-value" class="col-xs-3 control-label">Future Value</label>
 		<div class="input-group col-xs-9">
 			<span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
-			<input id="future-value" ng-model="vars.futureValue" required type="text" class="form-control">
+			<input id="future-value" ng-model="vars.futureValue" required type="number" min="1" class="form-control">
 			<span class="input-group-addon">.00</span>
 		</div>
 	</div>
