@@ -10,7 +10,7 @@ Annuity.controller('AnnuityController', function ($scope, $filter, FinancialServ
 		'years': 'Years',
 		'ratePercent': 'Growth Rate',
 		'result': 'Annual Payout',
-		'timing': 'Make Payouts at the',
+		'timing': 'Make Payouts at',
 		'timingStart': 'Beginning of each year (annuity due)',
 		'timingEnd': 'Close of each year  (ordinary / immediate annuity)'
 	}
