@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="calculator">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 	<head>
 		<title>Financial Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
 		<link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 		
@@ -37,7 +38,7 @@
 		<div class="container" ng-controller="calculatorDataController">
 
 			<header>
-				<h1>Financial Calculators</h1>
+				<h1><span class="hidden-xs">Financial </span>Calculators</h1>
 
 				<div class="btn-group-sm">
 					<a href="#" class="btn btn-default btn-xs" ng-class="returnRateActive">
