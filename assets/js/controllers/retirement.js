@@ -9,7 +9,7 @@ Retirement.controller('RetirementController', function ($scope, $filter, Financi
 		'principal': 'Current Principal',
 		'years': 'Years to Retirement',
 		'ratePercent': 'Growth Rate',
-		'annualAddition': 'Annual Contribution',
+		'annualAddition': 'Annual Addition',
 		'result': 'Annual Retirement Income'
 	}
 

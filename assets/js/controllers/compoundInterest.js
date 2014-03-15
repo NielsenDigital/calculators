@@ -10,7 +10,7 @@ CompoundInterest.controller('CompoundInterestController', function ($scope, $fil
 		'principal': 'Current Principal',
 		'years': 'Years to Grow',
 		'ratePercent': 'Growth Rate',
-		'annualAddition': 'Annual Contribution',
+		'annualAddition': 'Annual Addition',
 		'result': 'Future Value',
 		'timing': 'Make Additions at the',
 		'timingStart': 'Beginning of each compounding interval',

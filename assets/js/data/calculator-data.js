@@ -29,23 +29,23 @@ calculatorData.controller('calculatorDataController', ['$scope', function($scope
 	$scope.calculators = {
 		"returnRate": {
 			"handle": "return-rate",
-			"name": "Return Rate Calculator",
+			"name": "Return Rate",
 			"description": "Figures the compound annual growth rate."
 		},
 		"annuity": {
 			"handle": "annuity",
-			"name": "Annuity Calculator",
+			"name": "Annuity",
 			"description": "Figures the annual payout over a period of years."
 		},
 		"retirement": {
 			"handle": "retirement",
-			"name": "Retirement Calculator",
+			"name": "Retirement",
 			"description": "Figures the annual retirement income over time accounting for " +
 								"pre-retirement contributions."
 		},
 		"compoundInterest": {
 			"handle": "compound-interest",
-			"name": "Compound Interest Calculator",
+			"name": "Compound Interest",
 			"description": "Figures future value accounting for compound interest."
 		}
 	};
