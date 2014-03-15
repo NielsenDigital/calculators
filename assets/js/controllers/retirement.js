@@ -9,6 +9,7 @@ Retirement.controller('RetirementController', function ($scope, $filter, Financi
 		'principal': 'Current Principal',
 		'years': 'Years to Retirement',
 		'ratePercent': 'Growth Rate',
+		'annualAddition': 'Annual Contribution',
 		'result': 'Annual Retirement Income'
 	}
 
@@ -23,14 +24,14 @@ Retirement.controller('RetirementController', function ($scope, $filter, Financi
 	
 	$scope.calculate = function calculate() {
 		var out = 0; 
-				
+/*				
 		alert("principal: " + $scope.vars.principal +
 				"\nannualAddition: " + $scope.vars.annualAddition +
 				"\nYears to retirement: " + $scope.vars.years + 
 				"\nrate pre-retirement: " + $scope.vars.ratePercent +
 				"\nYears to Payout: " + $scope.vars.yearsToPayout +
 				"\nrateInRetirement: " + $scope.vars.ratePercentRetirement);
-				
+*/				
 		var fsi = FinancialService.investment($scope.vars.principal,
 											  $scope.vars.ratePercent,
 										 	  $scope.vars.years,
@@ -40,7 +41,7 @@ Retirement.controller('RetirementController', function ($scope, $filter, Financi
 									$scope.vars.ratePercentRetirement,
 									$scope.vars.yearsToPayout);
 									
-		$scope.vars.result = '$ ' + out;
+		$scope.vars.result = $filter('currency')(out);
 	}
 	
 });

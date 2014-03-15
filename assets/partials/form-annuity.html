@@ -2,28 +2,7 @@
   <ng-include src="fields.principal"></ng-include>
   <ng-include src="fields.ratePercent"></ng-include>
   <ng-include src="fields.years"></ng-include>
-
-<div class="form-group">
-	<label for="payout-timing" class="col-sm-3 control-label">Payouts are made at the</label>
-	<div class="col-sm-9">
-		<!-- START of Year -->
-		
-		<div class="radio">
-			<label>
-				<input id="payout-timing1" ng-model="vars.payoutTiming" type="radio"  value="start">
-				Beginning of each year (annuity due) 
-			</label>
-		</div>
-
-		<!-- END of year -->
-		<div class="radio">
-			<label>
-				<input id="payout-timing1" ng-model="vars.payoutTiming" type="radio" value="end">
-				Close of each year  (ordinary / immediate annuity)
-			</label>
-		</div>
-	</div>
-</div>
+  <ng-include src="fields.timing"></ng-include>
   
   <ng-include src="fields.calculateResults"></ng-include>
 

@@ -9,7 +9,10 @@ Annuity.controller('AnnuityController', function ($scope, $filter, FinancialServ
 		'principal': 'Current Principal',
 		'years': 'Years',
 		'ratePercent': 'Growth Rate',
-		'result': 'Annual Payout'
+		'result': 'Annual Payout',
+		'timing': 'Make Payouts at the',
+		'timingStart': 'Beginning of each year (annuity due)',
+		'timingEnd': 'Close of each year  (ordinary / immediate annuity)'
 	}
 
 	$scope.vars = {
@@ -29,7 +32,7 @@ Annuity.controller('AnnuityController', function ($scope, $filter, FinancialServ
 			out *= (1 + $scope.vars.ratePercent);
 		}
 			
-		$scope.vars.result = '$ ' + $filter('currency')(out,2);
+		$scope.vars.result = $filter('currency')(out);
 	}
 	
 });

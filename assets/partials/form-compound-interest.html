@@ -1,30 +1,21 @@
 <form id="calculatorForm" role="form" class="form-horizontal">
 
-      <ng-include src="fields.principal"></ng-include>
-	  <ng-include src="fields.ratePercent"></ng-include>
-	  <ng-include src="fields.years"></ng-include>
+	<ng-include src="fields.principal"></ng-include>
+	<ng-include src="fields.annualAddition"></ng-include>	  
+	<ng-include src="fields.years"></ng-include>
+	<ng-include src="fields.ratePercent"></ng-include>
 
+	<div class="form-group">
+		<label for="compoundFrequency" class="col-xs-3 control-label">Compound Interest</label>
+		<div class="input-group col-xs-9">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
+			<input id="compoundFrequency" ng-model="vars.compoundFrequency" required type="text" class="form-control" placeholder="Enter a whole number e.g., 1, 2, 3 ..."/>
+			<span class="input-group-addon"> time(s) annually </span>
+		</div>
+	</div>
 
-  <div class="form-group">
-    <label for="payout-timing" class="col-sm-3 control-label">Payouts are made at the</label>
-    <div class="col-sm-9">
-    <div class="radio">
-      <label>
-        <input type="radio" name="payout-timing" id="payout-timing1" value="start">
-        Beginning of each year (annuity due) 
-      </label>
-      </div>
-      <div class="radio">
-      <label>
-        <input type="radio" name="payout-timing" id="payout-timing2" value="end">
-        Close of each year  (ordinary / immediate annuity)
-      </label>
-      </div>
-    </div>
-  </div>
-
-  <ng-include src="fields.calculateResults"></ng-include>
-
+	<ng-include src="fields.calculateResults"></ng-include>
 
 </form>
+
 <div class="clearfix"></div>

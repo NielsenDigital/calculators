@@ -12,6 +12,8 @@ calculatorData.controller('calculatorDataController', ['$scope', function($scope
 		'principal': $scope.formFieldsDir + 'principal.html',
 		'ratePercent': $scope.formFieldsDir + 'rate-percent.html',
 		'years': $scope.formFieldsDir + 'years.html',
+		'annualAddition': $scope.formFieldsDir + 'annual-addition.html',
+		'timing': $scope.formFieldsDir + 'timing.html',
 		'calculateResults': $scope.formFieldsDir + 'calculate-results.html'
 	};
 

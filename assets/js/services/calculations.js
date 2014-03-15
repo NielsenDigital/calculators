@@ -21,8 +21,8 @@ calc.service('FinancialService', function() {
 		else amount = (Math.pow(num, exp + 1) - 1) / (num - 1);
 
 		// ()
-		if (m >= 1) amount -= geometricSeries(num, 0, m - 1);
-		alert("m: " + m);
+		if (m >= 1) amount -= this.geometricSeries(num, 0, m - 1);
+		
 		return amount;
 	}
 	
